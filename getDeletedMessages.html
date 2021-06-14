@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- JQuery import -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- A font import -->
+    <!-- I import fonts from Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <!--  Another font-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<!-- css (styling) code import, I wrote this -->
+<link href="./stylesheet.css" rel="stylesheet"> 
+<!-- I was lazy so I edited the CSS here, setting the size of h1 elements to be 15 view heights -->
+<!-- 1vh is 1% of the height of the website -->
+<style>h1{font-size: 15vh !important;}</style>
+<!-- imports JQuery code that puts the deleted messages into the unordered list with the id content -->
+<script src="./dMes.js"></script>
+ <!-- Encodes the text on the page in UTF-8, which covers almost all symbols.
+    This is part of VSCode's HTML boilerplate
+ -->
+<meta charset="UTF-8">
+  <!-- Sets the width of the window to be the device width and the amplification of the CSS values to be 1x. This is essentially arbitrary in most browsers, 
+        but allows fancier things with CSS that I didn't use. Again, part of the VSCode HTML boilerplate-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Big text (remember, 15 view heights font size) -->
+    <h1 id="intro">Deleted messages from </h1>
+         <!-- Makes a container for all the content. If I ever want to add more content outside of the list of servers, I'll add it at the end of this. -->
+    <div id="contentDiv">
+          <!-- Makes an unordered list (ul) with the identifier "content" that I add the list items (li's) to in the app.js file. These li's text are information about deleted messages -->
+    	<ul id="content"></ul>
+    </div>
+</head>
+<body>
+
+</body>
+</html>

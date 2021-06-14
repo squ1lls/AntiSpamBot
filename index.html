@@ -1,0 +1,40 @@
+<!-- This is in English HTML -->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Import JQuery from Google's CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Import my code in app.js that adds the user's servers to the ul with the id content -->
+    <script src="./app.js"></script>
+    <!-- code to import a Google font. Implemented in the stylesheet.css import -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+  <!-- Another font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<!-- import my CSS styling code -->
+<link href="./stylesheet.css" rel="stylesheet"> 
+<!-- Encodes the text on the page in UTF-8, which covers almost all symbols.
+    This is part of VSCode's HTML boilerplate
+ -->
+<meta charset="UTF-8">
+
+    <!-- Sets the width of the window to be the device width and the amplification of the CSS values to be 1x. This is essentially arbitrary in most browsers, 
+        but allows fancier things with CSS that I didn't use. Again, part of the VSCode HTML boilerplate-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Big text that says "Your Servers" -->
+    <h1 id="intro">Your servers</h1>
+    <!-- Makes a container for all the content. If I ever want to add more content outside of the list of servers, I'll add it at the end of this. -->
+    <div id="contentDiv">
+        <!-- Makes an unordered list (ul) with the identifier "content" that I add the list items (li's) to in the app.js file. These li's text are the Discord server names -->
+    	<ul id="content"></ul>
+    </div>
+</head>
+<!-- makes a footer section at the bottom of the website -->
+<footer>
+    <!-- puts a small sized credits text in the footer -->
+    <h5 class="footerChild">Created by Daniel George and William Margulies</h5>
+</footer>
+<body>
+</body>
+</html>
