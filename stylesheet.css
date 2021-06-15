@@ -1,6 +1,8 @@
+/* sets the font family of everything (*) to be teko without a serif. When there is overflow, go to the next line, even mid-word*/
 *{font-family: 'Teko', sans-serif;
 overflow-wrap:break-word;
 }
+/* <p> text elements have those English attributes */
 p{
 	font-size: 10vh;
 	color: #ff7171;
@@ -8,68 +10,102 @@ p{
 	margin: 5px;
 
 }
+/* <h1> have those attributes */
 h1{
 	margin: 1vh;
 	font-size: 30vh;
+	/* sets the color to red, what that hash code is */
 	color: #ff7171;
 	text-align: center;	
+	/* the elements are positioned relative to one another */
 	position: relative;
+	/* created by JacobLett */
   text-shadow: 10px 15px rgba(0, 0, 0, .2);
+  /*Sets the animation of h1 elements to be a (defined below) at 2 seconds each repition repetitively  */
   animation: a 2s infinite;
 }
+/* The footer section will have these English attributes */
 footer{
 	background-color:#9fd8df;
 	margin: none !important;
 	padding: 30px;
 }
+/* Any element with this classname will have no margin around it */
 .footerChild{
 	margin: 0 !important;
 }
+/* The background of the document, the body, will be that color. */
 body{
 background-color: #f0e4d7;
 }
+/* unordered list elements will have those attributes */
 ul{
+	/* A rounded border with a radius of 15 view heights */
 	border-radius: 15vh;
+	/* have this background color */
 	background-color: #f5c0c0;
+	/* 10view heights font size */
 	font-size: 10vh;
+	/* 5vh between thh text and the top of the elemnt/backgorund */
 padding-top: 5vh;
+	/* 5vh between thh text and the bottom of the elemnt/backgorund */
 padding-bottom: 5vh;
 }
+/* list items will have these attributes */
 li{
+	/* background color of list elements are this color */
 	background-color: #9fd8df;
+	/* margin around it of 20 view heights */
 	margin: 20vh;
+	/* from jacobLett, set a shadow for the list elements */
 	box-shadow:0 1rem 3rem rgba(0,0,0,.6)!important;
 	text-align: center;
 	color: #ff7171;
+	/* from jacobLett, set a shadow for the text */	
 	text-shadow: 5px 7px 0px rgb(0 0 0 / 20%);
+	/* padding of 1 view height around the list elements */
 	padding: 1vh;
+	/* no bullet points in fron tof the elements */
 	list-style-type: none;
 
 }
 li#text{
-	
+	/* The text elements of the li have animation b that lasts 3 seconds repetitively*/
 	animation: b 3s infinite;
+	/* list elements have this text shadow. From JacobLett */
 	text-shadow:0 1rem 3rem rgba(0,0,0,.3)!important;
 }
 h5{
+	/* 3 view height font size */
 	font-size: 3vh;
+	/* .5 view height margin around h5 elements */
 margin: .5vh;
+/* no text shadows for h5 elements */
 text-shadow: none !important;
+/* black text color */
 color: black
 }
 h2{
+	/* no text shadow */
 	text-shadow: none !important;
+	/* 4 view height font size */
 	font-size: 4vh;
+	/* .5 view height margin around h2 elements */
 	margin: .5vh;
+	/* Are placed relative to other elements */
 	position: relative;
+	/* black text color */
 	color: black;
+	/* 20% see through */
 	opacity: 80%;
 }
+/* Animation: the element is 1vh from the top at 0%, 2.8vh at 50%, and 100% back at 1vh */
 @keyframes a {
   0% {top: 1vh;}
   50% {top: 2.8vh;}
   100%{top: 1vh;}
 }
+/* Animation: the element is 0vw from the left at 0%, 1vw at 50%, and 100% back at 0 */
 @keyframes b{
 	0%{left: 0}
 	50%{left: 1vw}

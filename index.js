@@ -11,7 +11,7 @@ const url = require("url");
 const querystring = require("querystring");
 const fetch = require("node-fetch");
 const $ = require( "jquery" )( window );
-console.log("hi");
+
 //Code to connect run Python in JavaScript by Michael Obasi
 
 
@@ -33,7 +33,7 @@ app.get("/", (req, res)=>{
 // not really necessary, but I wasn't sure how to do it at the time
 // and put it in a separate file
 app.get("/oauth2reformat.htm", (req, res) =>{
-    console.log("reformat");
+
     res.sendFile("oauth2reformat.htm", options, (err)=>{});
 })
 //sends the code to the user to get what Discord servers they are in
@@ -50,7 +50,6 @@ app.get("/getDeletedMessages", (req, res) =>{
 })
 //Sends the JQuery code necessary to get the deleted messsages' value and info from the backend 
 app.get("/dMes.js", (req, res)=>{
-  console.log("hi")
     res.sendFile("dMes.js", options, (err)=>{})
 })
 //Sends the user information about the deleted messages of their server
@@ -76,15 +75,6 @@ app.get('/yo.json', (req, res) =>{
   const tokenType = parsedQueries.token_type;
   const accessToken = parsedQueries.access_token;
 //discordjs documentation
-
-
-//IGNORE/delete if the program is still functional
-//   fetch("https://discord.com/api/users/@me", {
-
-//   headers: {authorization: `${tokenType} ${accessToken}`}
-//  }).then(response => response.json()).then(response => {console.log(response)})
- 
-
 //uses node-fetch library to contact discord with the accessToken they gave me
 //They give me the server's the user is in and then I turn it into a JSON structure
 //and then I send that to the user using res.json
@@ -92,8 +82,7 @@ app.get('/yo.json', (req, res) =>{
 
   headers: {authorization: `${tokenType} ${accessToken}`}
  }).then(response => response.json()).then(
-   response => {res.json(response)
-  console.log(response);} 
+   response => {res.json(response)} 
  );
 
 })
@@ -114,8 +103,7 @@ client.login("ODQ1ODQ2MzYwMDQ1MTI1NjMz.YKm5zw.sn1UK2yZjrsxU-SNGvTSTRwYdYU");
   firebase.initializeApp(firebaseConfig);
 
 //When my bot is in a server where a message is sent
-  client.on("message", message =>{
-    console.log("hi");
+client.on("message", message =>{
     //If it's spam (determined by code by Daniel George) and it's not sent by myself
   onMessage(message)
 
@@ -126,7 +114,6 @@ if(message.author.id!=845846360045125633){
   $.getJSON("http://127.0.0.1:5000/?message=" + message.content, data => {
   
     if(data.isSpam){
-      console.log("kys dan");
       //Log the message in the database that can be referenced using the id of the server, or guild, that the message was sent in
      //It logs the message content and the author of it
      
@@ -135,7 +122,7 @@ if(message.author.id!=845846360045125633){
        //Reply to the message not to spam
       message.reply("No spam please senor");
       //and deletes the message
-      message.delete();   }else{console.log("works");}
+      message.delete();   }
 
 
     })
