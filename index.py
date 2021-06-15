@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[19]:
-
+# CODE ATTRIBUTED TO DANIEL GEORGE
 import pickle
 from nltk.stem import PorterStemmer
 ps = PorterStemmer()
@@ -10,18 +10,14 @@ import numpy as np
 import re
 from sklearn import preprocessing
 from sklearn import svm
+# 
+# code attributed to flask documentation
 import flask
 from flask import request, jsonify
 from flask_cors import CORS, cross_origin
 app = flask.Flask(__name__)
 CORS(app)
 # In[20]:
-
-
-
-
-
-
 @app.route('/', methods=['GET'])
 @cross_origin()
 def home():
@@ -29,10 +25,10 @@ def home():
     message = request.args.get('message')
     print(message)
     message.replace("%20", " ")
-  
+# 
 
     # In[21]:
-
+# code attributed to daniel george
 
     words = np.load('/Users/william/words.npy')
 
@@ -91,8 +87,7 @@ def home():
 
 
 
-    
-    lol=False
+    # if the output array (with a length of 1) is spam, return a json file containing isSpam=true. Otherwise, false
     if output[0] == "spam":
         return jsonify(
             isSpam=True
